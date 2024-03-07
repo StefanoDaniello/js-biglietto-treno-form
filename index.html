@@ -11,42 +11,43 @@
     <title>js-biglietto-treno-form</title>
 </head>
 <body>
-    <header></header>
-    <main>
+    <header class="text-center py-2">
         <h1 class="text-uppercase text-light my-3">calcola il prezzo del tuo biglietto</h1>
+    </header>
+    <main>
         <div class="bg-light h-25 p-4">
             <div class="d-flex justify-content-around ">
                 <div>
                     <h4 class="text-color ">Nome Cognome</h4>
-                    <input type="text" class="my-3 text-center form-control">
+                    <input type="text" class="my-3 text-center form-control"  id="userNome" value="">
                 </div>
                 <div>
                     <h4 class="text-color ">km da percorrere</h4>
-                    <input type="text" class="my-3 text-center form-control">
+                    <input type="text" class="my-3 text-center form-control" id="kilometers"  value="">
                 </div>
                 <div>
                     <h4 class="text-color ">Fascia d'età</h4>
-                    <select id="inputState" class="form-select my-3">
-                      <option selected>Maggiorenne</option>
-                      <option>Minorenne</option>
-                      <option>Over 65+</option>
+                    <select id="inputState" class="form-select my-3" id="age">
+                      <option value="">Maggiorenne</option>
+                      <option value="underage">Minorenne</option>
+                      <option value="old">Over 65+</option>
                     </select>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <button type="button" class="btn btn-secondary text-color mx-3">Genera</button>
+                <button type="button" class="btn btn-secondary text-color mx-3" id="generate">Genera</button>
                 <button type="button" class="btn btn-secondary text-color mx-3">Annulla</button>
             </div>
         </div>
        
 
         <h1 class="text-uppercase text-light my-3">il tuo biglietto</h1>
-        <div class="bg-light h-50 p-4">
+        <div class="bg-light h-50 p-4 box">
             <h4 class="text-uppercase text-black">dettaglio passeggerei</h4>
             <div class="d-flex">
                 <div class="bg-secondary p-3">
                     <h4 class="text-uppercase text-black">nome passeggero</h4>
-                    <h5 class="text-black" id="userNome"></h5>
+                    <h5 class="text-black" id="nome">jjj</h5>
                 </div>
                 <div>
                     <table class="table table-borderless">
