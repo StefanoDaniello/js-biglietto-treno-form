@@ -39,4 +39,9 @@ elButton.addEventListener('click', function(){
 
 
 
+    elNome.innerHTML = valuenome;
+    
+
+
+
 })
