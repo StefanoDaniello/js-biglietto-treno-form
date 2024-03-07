@@ -38,6 +38,7 @@ elButton.addEventListener('click', function(){
     // }else{
     //     valuenome= elUsernome.value;
     // }
+    elBox.classList.remove('d-none');
     const valuenome = elUsernome.value;
     const km = elKilometers.value;
     const age = elAge.value;
@@ -57,13 +58,12 @@ elButton.addEventListener('click', function(){
     elTicket.innerHTML = ageclass.toFixed(2) + (" \u20AC");
 })
 
-elButton2.addEventListener('click', function(){    
+elButton2.addEventListener('click', function(){  
+    elBox.classList.add('d-none');
     document.getElementById('userNome').value="";
    document.getElementById('kilometers').value="";
    elNome.innerHTML='';
    elClasse.innerHTML='';
-
-
 })
 
 
