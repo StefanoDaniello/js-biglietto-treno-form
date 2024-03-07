@@ -1,0 +1,24 @@
+/* reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* general */
+body{
+    background-color: #B91450;
+}
+/* main  */
+main{
+    width: 1200px;
+   
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* text-utility  */
+.text-color{
+    color:#B91450;
+}
