@@ -30,6 +30,9 @@ elButton.addEventListener('click', function(){
     const age = elAge.value;
     console.log(valuenome, km, age);
 
-    elNome.innserHTML = valuenome;
+    elNome.innerHTML = valuenome;
     
+
+
+
 })
