@@ -29,19 +29,14 @@ elButton.addEventListener('click', function(){
     const valuenome = elUsernome.value;
     const km = elKilometers.value;
     const age = elAge.value;
-    const ageclass = (age ==='adult') ? km*0.21 : '';
+    const pTicket = km*0.21;
+    const ageclass = (age ==='adult') ? pTicket :
+    (age ==='underage') ? pTicket*20/100 :
+    (age ==='old') ? pTicket*40/100 : '';
 
 
-    console.log(valuenome, km, age, ageclass);
-
-    elNome.innerHTML = valuenome;
-    elTicket.innerHTML = ageclass;
-
-
+    console.log(valuenome, km, age, pTicket,ageclass);
 
     elNome.innerHTML = valuenome;
-    
-
-
-
+    elTicket.innerHTML = ageclass.toFixed(2) + (" \u20AC");
 })
