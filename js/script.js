@@ -9,7 +9,9 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 */
 
 let elUsernome = document.getElementById('userNome');
-
+//   if(!isNaN(elUsernome)){
+//      console.log('Errore inserisci un nome valido!!!')
+//     }
 let elKilometers = document.getElementById('kilometers');
 
 let elAge = document.getElementById('age');
@@ -33,14 +35,18 @@ console.log(elBox,elNome)
 
 elButton.addEventListener('click', function(){
     // console.log('hai cliccato il bottone');
-    // if (elUsernome.value === !isNaN){
-    //     elNome.innerHTML='errore!';
-    // }else{
-    //     valuenome= elUsernome.value;
-    // }
+    
+     
     elBox.classList.remove('d-none');
-    const valuenome = elUsernome.value;
-    const km = elKilometers.value;
+    let valuenome ;
+    if (!isNaN(elUsernome.value)){
+        elNome.innerHTML='errore!';
+        console.log('errore!')
+        }else{
+        valuenome= elUsernome.value;
+        elNome.innerHTML=valuenome;
+    }
+    const km = parseInt(elKilometers.value) ;
     const age = elAge.value;
     elClasse.innerHTML='Biglietto Standard';
     const numberdear = getRndInteger(1,12) ;
@@ -52,16 +58,18 @@ elButton.addEventListener('click', function(){
 
     console.log(elBox,valuenome, km, age, numberdear,numbercode ,pTicket,ageclass);
 
-    elNome.innerHTML = valuenome;
+    // elNome.innerHTML=valuenome;
     elDear.innerHTML=numberdear;
     elCode.innerHTML=numbercode;
-    elTicket.innerHTML = ageclass.toFixed(2) + (" \u20AC");
+    elTicket.innerHTML=ageclass.toFixed(2) + ("\u20AC");
 })
 
 elButton2.addEventListener('click', function(){  
-    elBox.classList.add('d-none');
-    document.getElementById('userNome').value="";
-   document.getElementById('kilometers').value="";
+    // elBox.classList.add('d-none');
+    document.getElementById('userNome').value= '';
+   document.getElementById('kilometers').value= '';
+   document.getElementById('dear').innerHTML = '';
+
    elNome.innerHTML='';
    elClasse.innerHTML='';
 })
